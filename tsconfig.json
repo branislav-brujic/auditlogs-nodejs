@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "removeComments": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "inlineSources": true,
+    "inlineSourceMap": true,
+    "noImplicitAny": false,
+    "outDir": "./build",
+    "baseUrl": ".",
+    "noLib": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "paths": {
+      "lib/*": [
+        "src/lib/*"
+      ]
+    }
+  },
+  "filesGlob": [
+    "./src/**/*.ts",
+    "!./node_modules/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+    "build",
+    "src/lib/util/customTypings"
+  ]
+}

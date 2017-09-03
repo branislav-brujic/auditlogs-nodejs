@@ -1,0 +1,49 @@
+{
+  "author": "Branislav Brujic",
+  "name": "auditlogs_nodejs",
+  "version": "0.0.1",
+  "description": "Auditlogs in NodeJS",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "clean": "rm -rf ./build",
+    "start": "npm run build && node ./build/lib/server.js",
+    "grunt": "grunt",
+    "build": "npm run clean && grunt",
+    "watch": "npm run build && concurrently -kr 'tsc --watch' 'nodemon --debug --delay 2000ms'"
+  },
+  "devDependencies": {
+    "@types/amqplib": "0.5.4",
+    "@types/async": "2.0.42",
+    "@types/body-parser": "1.16.5",
+    "@types/cookie-parser": "1.4.1",
+    "@types/errorhandler": "0.0.31",
+    "@types/promise": "7.1.30",
+    "@types/typescript": "2.0.0",
+    "@types/winston": "2.3.5",
+    "grunt": "1.0.1",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-ts": "6.0.0-beta.16",
+    "nodemon": "1.11.0",
+    "typescript": "2.5.2"
+  },
+  "dependencies": {
+    "amqplib": "0.5.1",
+    "async": "2.5.0",
+    "body-parser": "1.17.2",
+    "cookie-parser": "1.4.3",
+    "cors": "2.8.4",
+    "errorhandler": "1.5.0",
+    "express": "4.15.4",
+    "grunt": "1.0.1",
+    "jwt-simple": "0.5.1",
+    "promise": "8.0.1",
+    "pug": "2.0.0-rc.3",
+    "winston": "2.3.1"
+  }
+}
